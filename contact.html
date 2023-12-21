@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оценка сайта</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="comp.png">
+</head>
+<body>
+    <header>
+        
+        <h1>Компьютерная техника</h1>
+        <img src="comp.png" alt="Логотип" class="logo"/>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Об авторе</a></li>
+            <li><a href="contact.html">Оценка сайта</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Оцените пожалуйста наш сайт!</h2>
+        <form>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="fullName">Фамилия Имя Отчество:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            
+            <label for="rating">Оценка сайта (от 1 до 10):</label>
+            <input type="number" id="rating" name="rating" min="1" max="10" required>
+            
+            <label for="impression">Впечатление о сайте:</label>
+            <textarea id="impression" name="impression" required></textarea>
+            
+            <input type="submit" value="Отправить">
+        </form>
+    </main>
+    <script>
+        var form=document.querySelector('form')
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Данные записаны')
+        })
+    </script>
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2023 Компьютерная техника. Все права защищены.</p>
+    </footer>
+</body>
+</html>

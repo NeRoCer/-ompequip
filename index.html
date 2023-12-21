@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компьютерная техника</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="comp.png">
+</head>
+<body>
+    <header>
+        
+        <h1>Компьютерная техника</h1>
+        <img src="comp.png" alt="Логотип" class="logo"/>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Об авторе</a></li>
+            <li><a href="contact.html">Оценка сайта</a></li>
+        </ul>
+    </nav>
+    
+    
+    <main>
+        <h2>Главная</h2>
+        <p>Добро пожаловать на наш сайт, посвященный захватывающему миру 
+            компьютерной техники! Мы рады приветствовать вас здесь, где вы 
+            сможете погрузиться в увлекательный мир инноваций, технологических 
+            достижений и последних новостей в сфере вычислительной техники.</p>
+        <p></p>
+        <h2>Цели сайта</h2>
+    <ul>
+      <li>Предоставление информации о компьютерной технике</li>
+      <li>Обучение пользователей основам работы с техникой</li>
+      <li>Поддержка и обмен опытом среди энтузиастов</li>
+      <li>Создание сообщества людей, интересующихся компьютерной техникой</li>
+    </ul>
+    <h2>Новинки представленные в 2023 году</h2>
+    <div class="image-container">
+        <figure class="modal-trigger">
+            <img src="minipk.jpeg" alt="Изображение 1">
+            <figcaption>Новый мини-ПК, представленные на CES 2023</figcaption>
+        </figure>
+        <figure class="modal-trigger">
+            <img src="monitor.jpeg" alt="Изображение 2">
+            <figcaption>На выставке CES 2023 был представлен необычный монитор Brelyon Fusion, который буквально охватывает голову пользователя.</figcaption>
+        </figure>
+        <figure class="modal-trigger">
+            <img src="mishka.jpg" alt="Изображение 3">
+            <figcaption>CheerDots 2 — первая в истории компьютерная мышь с искусственным интеллектом (ИИ) внутри (интеграцию с ChatGPT).</figcaption>
+        </figure>
+        <figure class="modal-trigger">
+            <img src="klava.png" alt="Изображение 4">
+            <figcaption>Лучшая клавиатура и конфигуратор CyberPowerPC Pearl CK60 представленная на выставке CES 2023</figcaption>
+        </figure>
+        <figure class="modal-trigger">
+            <img src="gpu.jpg" alt="Изображение 5">
+            <figcaption>NVIDIA представила новый графический процессор GeForce RTX 4090 с архитектурой Ada Lovelace и 24 Гб памяти GDDR6X. Это обеспечивает значительный прирост производительности по сравнению с предыдущими поколениями GPU.</figcaption>
+        </figure>
+        <figure class="modal-trigger">
+            <img src="processor.jpg" alt="Изображение 6">
+            <figcaption>Intel представила процессоры Core Ultra со встроенными нейрочипами</figcaption>
+        </figure>
+    </div>
+    <div class="modal" id="myModal">
+        <span class="modal-content" id="modalImg"></span>
+    </div>
+    <h2>Новинки Asus на CES 2023</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="video.mp4" allowfullscreen></iframe>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var modalTriggerElements = document.querySelectorAll('.modal-trigger');
+
+            modalTriggerElements.forEach(function (element) {
+                element.addEventListener('click', function () {
+                    var modal = document.getElementById('myModal');
+                    var modalImg = document.getElementById('modalImg');
+                    var img = this.querySelector('img');
+
+                    modal.style.display = 'flex';
+                    modalImg.innerHTML = '<img src="' + img.src + '" alt="' + img.alt + '">';
+                });
+            });
+
+            document.getElementById('myModal').addEventListener('click', function () {
+                this.style.display = 'none';
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+    
+    <footer>
+        <p>&copy; 2023 Компьютерная техника. Все права защищены.</p>
+    </footer>
+</body>
+</html>
