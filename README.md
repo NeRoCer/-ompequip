@@ -1,1 +1,1 @@
-# -ompequip
+# compequip
